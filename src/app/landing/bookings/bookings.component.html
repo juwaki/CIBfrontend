@@ -1,0 +1,91 @@
+<div class="container">
+    <mat-tab-group>
+        <mat-tab>
+            <ng-template mat-tab-label class="label1">
+                <!-- <mat-icon class="example-tab-icon">thumb_up</mat-icon> -->
+                <i class="fa fa-plane flight example-tab-icon" aria-hidden="true"></i> {{flight}}
+            </ng-template>
+            <mat-card class="mainCard">
+                <form FormGroup="bookingForm">
+
+                    <div>
+                        <h3>BOOK YOUR FLIGHTS</h3>
+
+                    </div>
+
+                    <div class="toggle">
+                        <mat-button-toggle-group class="togglebutton" name="fontStyle" aria-label="Font Style" [value]="selectedVal">
+                            <mat-button-toggle value="option1" [ngClass]="{'active': domestic}" (click)="domestics()" class="font">Domestic</mat-button-toggle>
+                            <mat-button-toggle value="option2" [ngClass]="{'active': !domestic}" (click)="International()" class="font">International</mat-button-toggle>
+                        </mat-button-toggle-group>
+                    </div>
+
+
+                    <div class="fromDiv">
+                        <span class="fromText">FROM</span>
+                        <input placeholder="Eg. Melbourne, Australia" class="from">
+                    </div>
+
+                    <div class="ToDiv">
+                        <span class="toText">TO</span>
+                        <input placeholder="Eg. New York, United States" class="to">
+                    </div>
+
+                    <div class="departDiv">
+                        <span class="departText">DEPARTURE</span>
+                        <input placeholder="MM/DD/YYYY" class="depart">
+                    </div>
+
+                    <div class="ReturntDiv">
+                        <span class="returnText">RETURN</span>
+                        <input placeholder="MM/DD/YYYY" class="depart">
+                    </div>
+
+                    <div class="ReturntDiv">
+                        <span class="returnText">RETURN</span>
+                        <input placeholder="MM/DD/YYYY" class="depart">
+                    </div>
+
+                    <div class="AdulttDiv">
+                        <span class="adultText">ADULTS</span>
+                        <input placeholder="2" class="adult">
+                    </div>
+
+                    <div class="search">
+                        <button mat-raised-button class="searchButton">SEARCH FLIGHTS</button>
+
+                    </div>
+
+                    <div class="advsearch">
+                        <span>  <u>Advanced Search</u> </span>
+                    </div>
+
+
+                </form>
+            </mat-card>
+        </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <i class="fa fa-bed example-tab-icon" aria-hidden="true"></i> {{hotels}}
+            </ng-template>
+            Under Construction
+        </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                {{flight}} + {{hotels}} <span class="save"><p class="savetext">save</p></span>
+            </ng-template>
+
+            Under Construction
+        </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <i class="fa fa-globe example-tab-icon" aria-hidden="true"></i> {{holiday}}
+            </ng-template>
+
+            Under Construction
+        </mat-tab>
+    </mat-tab-group>
+</div>

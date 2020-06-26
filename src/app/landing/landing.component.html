@@ -1,0 +1,108 @@
+<div class="container">
+
+    <div class="topMenuBar">
+
+        <button mat-button [matMenuTriggerFor]="aboveMenu">Home</button>
+        <mat-menu #aboveMenu="matMenu" yPosition="above">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+        </mat-menu>
+
+        <button mat-button [matMenuTriggerFor]="belowMenu">FAQs</button>
+        <mat-menu #belowMenu="matMenu" yPosition="below">
+            <button mat-menu-item>Frequently asked questions</button>
+            <button mat-menu-item>Ask a question</button>
+        </mat-menu>
+
+        <button mat-button [matMenuTriggerFor]="beforeMenu">Contact</button>
+        <mat-menu #beforeMenu="matMenu" xPosition="before">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+        </mat-menu>
+
+        <div class="arrow">
+            <select id="currency" class="select">
+                <option value="volvo">USD</option>
+                <option value="saab">ZAR</option>
+                <option value="opel">AUD</option>
+            </select>
+        </div>
+
+        <div class="icons">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-twitter twit" aria-hidden="true"></i>
+            <i class="fa fa-pinterest-p pin" aria-hidden="true"></i>
+            <i class="fa fa-instagram insta" aria-hidden="true"></i>
+            <i class="fa fa-phone phone" aria-hidden="true"></i>
+            <i class="fa fa-envelope mail" aria-hidden="true"></i>
+
+        </div>
+
+    </div>
+
+    <div class="navbar">
+        <h5>canvas</h5>
+
+        <div class="navbarchild">
+
+            <div class="homeDiv">
+                <i class="fa fa-home home" aria-hidden="true"></i>
+
+                <button mat-button [matMenuTriggerFor]="aboveMenu">Home</button>
+            </div>
+
+            <!-- <mat-menu #aboveMenu="matMenu" yPosition="above">
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Item 2</button>
+            </mat-menu> -->
+
+            <i class="fa fa-plane flight" aria-hidden="true"></i>
+
+            <button mat-button [matMenuTriggerFor]="belowMenu" class="flighttext">Flights</button>
+            <mat-menu #belowMenu="matMenu" yPosition="below">
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Item 2</button>
+            </mat-menu>
+
+
+
+
+            <i class="fa fa-bed hotel" aria-hidden="true"></i>
+
+            <button mat-button [matMenuTriggerFor]="afterMenu" class="hoteltext">Hotels</button>
+            <mat-menu #afterMenu="matMenu" xPosition="after">
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Item 2</button>
+            </mat-menu>
+
+            <i class="fa fa-globe holiday" aria-hidden="true"></i>
+
+            <button mat-button [matMenuTriggerFor]="afterMenu20" class="holidaytext">Holidays</button>
+            <mat-menu #afterMenu20="matMenu" xPosition="after">
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Item 2</button>
+            </mat-menu>
+
+
+
+            <i class="fa fa-pencil blog" aria-hidden="true"></i>
+
+            <button mat-button [matMenuTriggerFor]="afterMenu2" class="blogtext">Blog</button>
+            <mat-menu #afterMenu2="matMenu" xPosition="after">
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Item 2</button>
+            </mat-menu>
+
+            <i class="fa fa-phone phone call" aria-hidden="true"></i> <span class="calltext">1800 105 2541</span>
+
+
+        </div>
+    </div>
+
+
+    <div class="tabCrad">
+
+        <app-bookings></app-bookings>
+    </div>
+
+</div>
